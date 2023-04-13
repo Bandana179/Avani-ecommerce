@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: "Roboto", sans-serif !important;
+}
+
+.featured-product .owl-prev {
+    position: absolute;
+    font-size: 47px !important;
+    left: -25px;
+    top: 145px;
+}
+.featured-product .owl-next {
+    position: absolute;
+    font-size: 47px !important;
+    right: -25px;
+    top: 145px;
+}
+.blog-carousel .owl-prev {
+    position: absolute;
+    font-size: 47px !important;
+    left: -25px;
+    top: 145px;
+}
+.blog-carousel .owl-next {
+    position: absolute;
+    font-size: 47px !important;
+    right: -25px;
+    top: 145px;
+}
+
+.blog-carousel .owl-item {
+    /* margin-right: 20px !important; */
+    /* width: 375.667px !important; */
+}
+
+.cart-message-container {
+    z-index: 100;
+    position: fixed;
+    top: 10px;
+    background-color: #dfcc7f;
+    right: 10px;
+    padding: 10px 25px;
+}
+
+.MyStyle {
+    display: block !important;
+}
+
+/* navmenu */
+/* #Mega Menu Styles
+  if you use sass, convert all this additional css to tailwindcss using the 'hack' @apply for all element.style (css properties)
+[ https://tailwindcss.com/docs/functions-and-directives/#apply ]
+example:
+  .mega-menu {
+  @apply
+  hidden
+  left-0
+  absolute
+  text-left
+  w-full;
+  }
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mega-menu {
+    display: none;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+}
+
+/* #hoverable Class Styles */
+.hoverable {
+    position: static;
+}
+
+.hoverable > a:after {
+    /*content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;*/
+}
+
+.hoverable:hover .mega-menu {
+    display: block;
+}
+
+/* #toggle Class Styles */
+
+.toggleable > label:after {
+    content: "\25BC";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+.toggle-input {
+    display: none;
+}
+.toggle-input:not(checked) ~ .mega-menu {
+    display: none;
+}
+
+.toggle-input:checked ~ .mega-menu {
+    display: block;
+}
+
+.toggle-input:checked + label {
+    color: white;
+    background: rgb(3, 102, 114); /*@apply bg-teal-700 */
+}
+
+.toggle-input:checked ~ label:after {
+    content: "\25B2";
+    font-size: 10px;
+    padding-left: 6px;
+    position: relative;
+    top: -1px;
+}
+
+/* navmenu end */
